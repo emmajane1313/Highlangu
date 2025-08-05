@@ -6,7 +6,7 @@ const Footer: FunctionComponent<{ dict: Record<string, string> }> = ({ dict }) =
   return (
     <div className="relative w-full h-fit bg-white p-4 flex flex-col gap-2">
       <div className="relative w-full h-fit bg-white border-2 px-2 border-black flex flex-col sm:flex-row">
-        <div className="relative w-fit h-full flex justify-between flex-col border-b-2 sm:border-r-2 p-2 gap-2">
+        <div className="relative w-fit h-full flex justify-between flex-col border-b-2 sm:border-b-0 sm:border-r-2 p-2 gap-2">
           <div className="relative w-full h-fit flex flex-col gap-2 sm:mb-0 mb-20">
             <div className="relative w-fit h-fit flex text-[7vw] sm:text-[4vw] uppercase font-lemon">
               Highlaŋu
