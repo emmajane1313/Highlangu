@@ -5,8 +5,8 @@ import Image from "next/image";
 const Footer: FunctionComponent<{ dict: Record<string, string> }> = ({ dict }) => {
   return (
     <div className="relative w-full h-fit bg-white p-4 flex flex-col gap-2">
-      <div className="relative w-full h-fit bg-white border-2 px-2 border-black flex flex-col sm:flex-row">
-        <div className="relative w-fit h-full flex justify-between flex-col border-b-2 sm:border-b-0 sm:border-r-2 p-2 gap-2">
+      <div className="relative w-full h-fit bg-white border-2 px-2 border-black flex flex-col sm:flex-row sm:items-stretch">
+        <div className="relative w-full h-auto flex justify-between flex-col border-b-2 sm:border-b-0 sm:border-r-2 p-2 gap-2">
           <div className="relative w-full h-fit flex flex-col gap-2 sm:mb-0 mb-20">
             <div className="relative w-fit h-fit flex text-[7vw] sm:text-[4vw] uppercase font-lemon">
               Highlaŋu
@@ -25,16 +25,14 @@ const Footer: FunctionComponent<{ dict: Record<string, string> }> = ({ dict }) =
         </div>
         <div className="relative w-full h-full flex flex-col">
           <div className="relative w-full h-full flex flex-col mid:flex-row justify-between border-b-2 gap-2 p-2">
-            <div className="relative w-full h-fit mid:h-full flex">
-              <div className="relative w-full h-[30rem] sm:h-[24rem] mid:h-full flex">
-                <Image
-                  draggable={false}
-                  layout="fill"
-                  objectFit="fill"
-                  alt="Highlaŋu electric couture dress"
-                  src={"/images/glitterdress.png"}
-                />
-              </div>
+            <div className="relative w-full flex h-[30rem] sm:h-[24rem] mid:h-auto">
+              <Image
+                draggable={false}
+                layout="fill"
+                className="w-full h-full"
+                alt="Highlaŋu electric couture dress"
+                src="/images/glitterdress.png"
+              />
             </div>
             <div className="relative w-full h-fit flex text-justify text-[4vw] sm:text-[1.7vw] mid:text-[1.1vw] font-face">
               Highlaŋu is shared resistance architecture, shaped over millennia
