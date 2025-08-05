@@ -2,7 +2,7 @@ import { FunctionComponent } from "react";
 import Transmissions from "./Transmissions";
 import Image from "next/image";
 
-const Footer: FunctionComponent<{ dict: any }> = ({ dict }) => {
+const Footer: FunctionComponent<{ dict: Record<string, string> }> = ({ dict }) => {
   return (
     <div className="relative w-full h-fit bg-white p-4 flex flex-col gap-2">
       <div className="relative w-full h-fit bg-white border-2 px-2 border-black flex flex-col sm:flex-row">

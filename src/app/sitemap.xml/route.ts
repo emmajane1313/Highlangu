@@ -6,7 +6,7 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://highlangu.com";
 const PATHS = [
   {
     route: "/",
-    images: VIDEOS.map((image, i) => ({
+    images: VIDEOS.map((image) => ({
       image: image.poster,
       title: image.title,
     })),

@@ -6,7 +6,6 @@ export async function generateStaticParams() {
 
 export default function Wrapper({
   children,
-  params,
 }: Readonly<{
   children: React.ReactNode;
   params: tParams;

@@ -1,7 +1,7 @@
 import { VIDEOS } from "@/app/lib/constants";
 import { FunctionComponent } from "react";
 
-const Transmissions: FunctionComponent<{ dict: any }> = ({ dict }) => {
+const Transmissions: FunctionComponent<{ dict: Record<string, string> }> = ({ dict }) => {
   return (
     <div className="relative w-full h-fit grid grid-cols-1 galaxy:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
       {VIDEOS.map((vid, i) => (

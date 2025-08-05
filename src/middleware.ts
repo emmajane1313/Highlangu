@@ -2,8 +2,8 @@ import { match } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
 import { NextRequest, NextResponse } from "next/server";
 
-let locales = ["en", "guf", "gd"];
-let defaultLocale = "en";
+const locales = ["en", "guf", "gd"];
+const defaultLocale = "en";
 
 function getLocale(request: NextRequest) {
   const cookieLocale = request.cookies.get("NEXT_LOCALE")?.value;
@@ -11,10 +11,10 @@ function getLocale(request: NextRequest) {
     return cookieLocale;
   }
 
-  let headers = {
+  const headers = {
     "accept-language": request.headers.get("accept-language") || "en",
   };
-  let languages = new Negotiator({ headers }).languages();
+  const languages = new Negotiator({ headers }).languages();
   return match(languages, locales, defaultLocale);
 }
 
