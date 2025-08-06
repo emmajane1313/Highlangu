@@ -62,3 +62,13 @@ export const VIDEOS: { src: string; poster: string; title: string }[] = [
 ];
 
 export const LOCALES: string[] = ["en", "gd", "guf"];
+
+export const LANGUAGE: { [key in string]: string } = {
+  ["en"]: "en",
+  ["ŋ"]: "guf",
+  ["gd"]: "gd",
+};
+
+export const INFURA_GATEWAY_INTERNAL: string =
+  "https://emancipa.xyz/api/infura/";
+export const INFURA_GATEWAY: string = "https://thedial.infura-ipfs.io/ipfs/";
