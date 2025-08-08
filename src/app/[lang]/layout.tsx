@@ -4,7 +4,7 @@ export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "guf" }, { lang: "gd" }];
 }
 
-export default function Wrapper({
+export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;

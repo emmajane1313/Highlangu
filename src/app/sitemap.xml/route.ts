@@ -11,6 +11,15 @@ const PATHS = [
       title: image.title,
     })),
   },
+  {
+    route: "/about/",
+    images: [
+      {
+        image: "emmajanemackinnonlee-dreamcore-portrait.png",
+        title: "Emma-Jane MacKinnon-Lee Dreamcore Portrait",
+      },
+    ],
+  },
 ];
 
 export async function GET() {

@@ -5,12 +5,15 @@ import Transmissions from "./Transmissions";
 import Image from "next/image";
 import useLanguage from "./hooks/useLanguage";
 import { INFURA_GATEWAY_INTERNAL } from "@/app/lib/constants";
+import { usePathname, useRouter } from "next/navigation";
 
 const Footer: FunctionComponent<{
   dict: Record<string, string>;
   lang: string;
 }> = ({ dict, lang }) => {
   const { changeLanguage } = useLanguage();
+  const router = useRouter();
+  const path = usePathname();
 
   return (
     <div className="relative w-full h-fit bg-white p-4 flex flex-col gap-2">
@@ -25,13 +28,7 @@ const Footer: FunctionComponent<{
             </div>
           </div>
           <div className="relative w-full h-fit  text-lg font-klar">
-            {dict?.thread}{" "}
-            <a
-              className="underline cursor-pointer"
-              href="https://highlangu.com"
-            >
-              {dict?.lore}
-            </a>
+            {dict?.thread}
           </div>
         </div>
         <div className="relative w-full h-full flex flex-col">
@@ -112,6 +109,14 @@ const Footer: FunctionComponent<{
           </div>
         </div>
       </div>
+      {!path?.includes("about") && (
+        <div
+          className="my-2 relative w-full h-fit flex flex-row justify-between gap-3 cursor-pointer text-xs font-klar underline underline-offset-3"
+          onClick={() => router.push("/about")}
+        >
+          {dict?.about}
+        </div>
+      )}
     </div>
   );
 };
